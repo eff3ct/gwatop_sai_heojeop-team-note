@@ -1,0 +1,68 @@
+\documentclass[10pt,landscape,a4paper,twocolumn]{article}
+
+\setlength{\columnsep}{20pt}
+
+\usepackage[left=1.0cm, right=1.0cm, top=1.5cm, bottom=1.0cm, headsep=0.4cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fontspec}
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{import}
+\usepackage{url}
+\usepackage{array}
+\usepackage[normal]{engord}
+\usepackage[svgnames,table]{xcolor}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{Hanyang Univ. - 과탑사이허접}
+
+\setmonofont[
+    BoldFont = consolab.ttf,
+    ItalicFont = consolai.ttf
+]{consola.ttf}
+\setmainhangulfont{Malgun Gothic}
+\setlength\parindent{0pt}
+\usepackage[parfill]{parskip}
+
+\definecolor{dkgrey}{RGB}{127, 127, 127}
+
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    breaklines=true,
+    breakindent=1.1em
+%    numbers=left,
+%    numberstyle=\footnotesize\ttfamily\color{dkgrey},
+%    numbersep=5pt
+%    frame=trbl
+}
+
+\lstdefinestyle{mycpp}{
+  language=[GNU]C++,
+  keywordstyle=\color{blue},
+  commentstyle=\itshape\color{purple!40!black},
+  stringstyle=\color{orange},
+}
+
+\begin{document}
+
+\section{Math}
+
+\subsection{Fast-Fourier-Transform}
+\lstinputlisting[style=mycpp]{src/math/Cooley-Tukey(FFT).cpp}
+
+\section{Segment Tree}
+
+\subsection{Dynamic Segment Tree}
+\lstinputlisting[style=mycpp]{src/segment-tree/dynamic-segment-tree.cpp}
+
+\section{Graph}
+
+\subsection{Heavy-Light Decomposition}
+\lstinputlisting[style=mycpp]{src/graph/tree/heavy-light-decomposition.cpp}
+
+\end{document}

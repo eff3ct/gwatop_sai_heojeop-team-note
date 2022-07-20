@@ -7,8 +7,7 @@ using ll = long long;
 using pii = pair<int, int>;
 using ppii = pair<int, pii>;
 
-class segment_tree { /* segment tree implementation */ };
-
+class segment_tree { /*implementation here*/ };
 class heavy_light_decomposition {
     private:
         int group_cnt;
@@ -20,6 +19,14 @@ class heavy_light_decomposition {
 
     public:
         void init() {
+            fill(tree_size, tree_size + MAX, 0);
+            fill(depth, depth + MAX, 0);
+            fill(parent, parent + MAX, 0);
+            fill(top_chain, top_chain + MAX, 0);
+            fill(in, in + MAX, 0);
+            fill(out, out + MAX, 0);
+            fill(visit, visit + MAX, false);
+
             group_cnt = 0;
 
             int N; cin >> N;

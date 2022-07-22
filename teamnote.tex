@@ -85,6 +85,11 @@
 
 8. $ dp[i] = max/min(a[i]b[j] + c[j]) + d[i]$ 꼴에, b가 단조증가 단조감소이면 CHT임.
 
+9. 카탈란 수 : 길이가 2n인 올바른 괄호 문자열 수, n + 2각형을 n개 삼각형으로 분할 하는 경우의 수 등으로 나올 수 있음.
+$$ C_n = \frac{1}{n + 1} \binom{2n}{n} $$
+$$ C_{n + 1} = \sum_{i=0}^{n} C_i C_{n-i} $$
+$$ C_{n + 1} = \frac{2(2n+1)}{n+2} C_n $$
+
 \section{DP optimization}
 
 \subsection{Convex Hull Trick}
@@ -99,6 +104,9 @@ DP 아닌데 저런 꼴이 보여도 적용할 수 있음.
 \subsection{Segment Tree with Lazy Propagation}
 \lstinputlisting[style=mycpp]{src/segment-tree/segtree-lazyprop.cpp}
 
+\subsection{Fenwick Tree}
+\lstinputlisting[style=mycpp]{src/segment-tree/fenwick-tree.cpp}
+
 \subsection{Dynamic Segment Tree}
 \lstinputlisting[style=mycpp]{src/segment-tree/dynamic-segment-tree.cpp}
 
@@ -109,6 +117,9 @@ DP 아닌데 저런 꼴이 보여도 적용할 수 있음.
 
 \subsection{Bellman-Ford}
 \lstinputlisting[style=mycpp]{src/graph/Bellman-Ford.cpp}
+
+\subsection{SCC(Kosaraju's Algorithm)}
+\lstinputlisting[style=mycpp]{src/graph/SCC-Kosaraju.cpp}
 
 \subsection{Heavy-Light Decomposition}
 \lstinputlisting[style=mycpp]{src/graph/tree/heavy-light-decomposition.cpp}
@@ -126,5 +137,13 @@ DP 아닌데 저런 꼴이 보여도 적용할 수 있음.
 
 \subsection{Point in Convex Hull Test}
 \lstinputlisting[style=mycpp]{src/geometry/point-in-convex-hull-test.cpp}
+
+\section{String}
+\subsection{KMP}
+\lstinputlisting[style=mycpp]{src/string/kmp.cpp}
+
+\section{Optimization}
+\subsection{GCC pragma}
+\lstinputlisting[style=mycpp]{src/etc/opt.cpp}
 
 \end{document}
